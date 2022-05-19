@@ -24,29 +24,12 @@
                     @enderror
                 </div>
                 <div class="form-group has-error col-md-3">
-                    <label class="control-label" for="inputError1">Seccion</label>
-                    <select id="seccion" name="seccion" class="form-control">
-                        <option>PREESCOLAR</option>
-                        <option>PRIMARIA</option>
-                        <option>SECUNDARIA</option>
-                        <option>PREPARATORIA</option>
-                        <option>ADMINISTRACION</option>
-                    </select>
+                    <label class="control-label" for="inputError1">domicilio</label>
+                    <input id="domicilio" type="text" class="form-control" name="domicilio"  required  autofocus>
                 </div>
                 <div class="form-group has-success col-md-2">
-                    <label class="control-label" for="inputSuccess1">Salon</label>
-                    <input id="salon" type="text" class="form-control"  name="salon" required >
-                </div>
-                <div class="form-group has-error col-md-3">
-                    <label class="control-label" for="inputError1">Puesto</label>
-                    <select id="puesto" name="puesto" class="form-control">
-                        <option>DOCENTE</option>
-                        <option>DIRECTOR</option>
-                        <option>JEFE DE DEPTO.</option>
-                        <option>AUXILIAR</option>
-                        <option>ADMINISTRATIVO</option>
-                        <option>GERENTE</option>
-                    </select>
+                    <label class="control-label" for="inputSuccess1">Telefono</label>
+                    <input id="telefono" type="text" class="form-control" name="telefono"  required  autofocus>
                 </div>
                 <div class="form-group has-success col-md-4">
                     <label class="control-label" for="inputSuccess1">Fecha de nacimiento</label>
@@ -70,8 +53,7 @@
                         <tr>
                             <th>Nombre</th>
                             <th>Email</th>
-                            <th>Seccion</th>
-                            <th>Salon</th>
+                            <th>Telefono</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -81,8 +63,7 @@
                                     <td><img class="dashboard-avatar" alt="Usman"
                                          src="/img/clientes/{{$cliente->id}}.jpg?s=50"> {{$cliente->nombre}} {{$cliente->id}}</td>
                                     <td class="center">{{$cliente->email}}</td>
-                                    <td class="center">{{$cliente->seccion}}</td>
-                                    <td class="center">{{$cliente->salon}}</td>
+                                    <td class="center">{{$cliente->telefono}}</td>
                                     <td class="center">
                                         <a class="btn btn-info" href="#">
                                             <i class="glyphicon glyphicon-edit icon-white"></i>

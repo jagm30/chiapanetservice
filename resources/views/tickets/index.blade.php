@@ -8,34 +8,20 @@
         <div class="box col-md-12">
         <div class="box-inner">
         <div class="box-header well" data-original-title="">
-        <h2><i class="glyphicon glyphicon-user"></i>Clientes</h2>                                
+        <h2><i class="glyphicon glyphicon-user"></i>Registro de nuevo servicio</h2>                                
     </div>
     <div class="box-content row">
             <form method="POST" action="/tickets">
-                @csrf
-                <div class="form-group has-warning col-md-2">
-                    <label class="control-label" for="inputWarning1">Fecha</label>
-                    <input id="fecha" name="fecha" required type="date" class="form-control" value="{{$fecha_actual}}">
-                </div>
+                @csrf                
                 <div class="form-group has-success col-md-4">
-                    <label class="control-label" for="inputSuccess1">Solicitante</label> 
+                    <label class="control-label" for="inputSuccess1">Cliente</label> 
                     <select required id="solicitante" name="solicitante" class="form-control" data-rel="chosen">
                         <option value="">Seleccione una opcion</option>
                         @foreach($clientes as $cliente)                            
                             <option value="{{$cliente->id}}">{{$cliente->nombre}}</option>
                         @endforeach
                     </select>
-                </div>
-                
-                <div class="form-group has-warning col-md-3">
-                    <label class="control-label" for="inputWarning1">Ubicacion</label>
-                    <select id="ubicacion" name="ubicacion" required class="form-control" data-rel="chosen">
-                        <option value="">Seleccione</option>
-                        @foreach($departamentos as $departamento)
-                            <option value="{{$departamento->id}}">{{$departamento->nombre}} - {{$departamento->seccion}}</option>
-                        @endforeach                        
-                    </select>
-                </div>
+                </div>                                
                 <div class="form-group has-warning col-md-3">
                     <label class="control-label" for="inputWarning1">Tipo de servicio</label>
                     <select id="tipo" name="tipo" class="form-control" required data-rel="chosen">
@@ -44,6 +30,14 @@
                             <option value="{{$catservicio->id}}">{{$catservicio->servicio}}</option>
                         @endforeach 
                     </select>
+                </div>
+                <div class="form-group has-warning col-md-3">
+                    <label class="control-label" for="inputWarning1">Lugar del servicio</label>
+                    <input id="ubicacion" name="ubicacion" required type="text" class="form-control" >
+                </div>
+                <div class="form-group has-warning col-md-2">
+                    <label class="control-label" for="inputWarning1">Fecha</label>
+                    <input id="fecha" name="fecha" required type="date" class="form-control" value="{{$fecha_actual}}">
                 </div>                
                 <div class="form-group has-success col-md-12">
                     <label class="control-label" for="inputSuccess1">Descripcion</label>

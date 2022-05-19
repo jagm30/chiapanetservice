@@ -43,9 +43,8 @@ class ClienteController extends Controller
         $cliente                   = new Cliente;        
         $cliente->nombre           = $request->nombre;
         $cliente->email            = $request->email;
-        $cliente->seccion          = $request->seccion;
-        $cliente->salon            = $request->salon;
-        $cliente->puesto           = $request->puesto;
+        $cliente->domicilio        = $request->domicilio;
+        $cliente->telefono         = $request->telefono;
         $cliente->fecha_nac        = $request->fecha_nac;        
         
         $cliente->save();
